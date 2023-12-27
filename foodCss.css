@@ -1,0 +1,780 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*------導覽頁CSS-------*/
+.menu {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    border-bottom: solid 0.1rem darkcyan;
+}
+
+.menuLogo a {
+    font-size: 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #2894ff;
+    margin: 5px;
+    Letter-spacing: 2px;
+}
+
+.menuLogo>a:hover {
+    background: #2894ff;
+    color: #1f242d;
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+
+.menuLogo>a span {
+    position: absolute;
+    display: block;
+    background: #2894ff;
+}
+
+.menuLogo>a span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s;
+}
+
+.menuLogo>a:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+}
+
+.menuLogo>a span:nth-child(2) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+    transition-delay: 0.25s;
+}
+
+.menuLogo>a:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.25s;
+    transition-delay: 0.25s;
+}
+
+.menuLogo>a span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+    transition-delay: 0.5s;
+}
+
+.menuLogo>a:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.25s;
+    transition-delay: 0.5s;
+}
+
+.menuLogo>a span:nth-child(4) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s;
+    transition-delay: 0.75s;
+}
+
+.menuLogo>a:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.25s;
+    transition-delay: 0.75s;
+}
+
+.mainMenu {
+
+    opacity: 0.8;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mainMenu a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    z-index: 5;
+    color: rgb(29, 42, 48);
+    font-size: 1.5rem;
+    padding: 1vh 1vw;
+    height: 100%;
+}
+
+.mainMenu>ul {
+    display: flex;
+}
+
+#subMenu {
+    display: none;
+    position: absolute;
+}
+
+#subMenu li {
+    height: 10vh;
+    padding: 1vh 0vw;
+    background-color: rgb(255, 255, 255);
+}
+
+#subMenuA li {
+    position: relative;
+    top: -1vh;
+    width: 100%;
+}
+
+.menuItem:hover #subMenu {
+    display: flex;
+}
+
+.mainMenu ul li a:hover {
+    box-shadow: 0 0 5px #ff0055,
+        0 0 5px #de00fc;
+    border-radius: 0.5em;
+    background-color: #4e565a;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.mainMember {
+    font-size: 1.2rem;
+    display: flex;
+}
+
+.mainMember div {
+    margin: 1vw;
+    font-weight: bold;
+}
+
+
+.mainMember a {
+    text-decoration: none;
+    color: #1c4848;
+    padding: 10px 10px;
+}
+
+.mainMember div:hover {
+    box-shadow: 0 0 5px #e3e6eb,
+        0 0 5px #263a7b;
+    background-color: #fff;
+    border-radius: 0.5em;
+    transition: 0.5s;
+    margin-top: 1vh;
+}
+
+/*------------超夯景點--------------*/
+
+.mainTop {
+    background: rgb(86, 37, 96);
+    color: rgb(255, 255, 255);
+    padding: 18vh;
+    z-index: -5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.topcirleA {
+    background: rgb(198, 3, 3);
+    width: 10vw;
+    height: 18vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: -2vw;
+    mix-blend-mode: screen;
+}
+
+.topcirleB {
+    background: rgb(4, 165, 165);
+    width: 10vw;
+    height: 18vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    mix-blend-mode: screen;
+}
+
+.topcirleC {
+    background: rgb(4, 138, 82);
+    width: 10vw;
+    height: 18vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    mix-blend-mode: screen;
+    right: 2vw;
+}
+
+.topcirleD {
+    background: rgb(218, 89, 4);
+    width: 10vw;
+    height: 18vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    mix-blend-mode: screen;
+    right: 4vw;
+}
+
+/*------------main選單--------------*/
+.allMain {
+    background: #98adc3;
+}
+
+.mainTopA {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 10vh;
+    gap: 0 7vw;
+    margin: 3vh;
+}
+
+.mainTopA button {
+    position: relative;
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 0.5vh 0;
+    padding: 2vh 1.5vw;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 2rem;
+    border-color: white;
+    background: linear-gradient(90deg, #2e0404, #b466a1);
+}
+
+.mainTopA button:nth-child(2) {
+    background: linear-gradient(90deg, #083a0e, #d7d576);
+}
+
+.mainTopA button:nth-child(3) {
+    background: linear-gradient(90deg, #755bea, #e0657c);
+}
+
+.mainTopA button:nth-child(4) {
+    background: linear-gradient(90deg, #755bea, #55e7fc);
+}
+
+.mainTopA span {
+    position: absolute;
+    background: rgb(213, 4, 255);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+/*-----------照片內容------------*/
+.mainMiddleA,
+.mainMiddleB,
+.mainMiddleC {
+    display: flex;
+    justify-content: center;
+    /*display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));*/
+}
+
+.mainMiddleA a,
+.mainMiddleB a,
+.mainMiddleC a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 3%;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #0a1f2a;
+}
+
+.mainMiddleA img,
+.mainMiddleB img,
+.mainMiddleC img {
+    border-radius: 2rem;
+}
+
+.mainMiddleAA,
+.mainMiddleBA,
+.mainMiddleCA {
+    border: solid 0.2rem rgb(99, 125, 135);
+    background: #e5e9eb;
+    border-radius: 2rem;
+    padding: 1vh 1vw;
+    margin: 0.5vh 0.5vw;
+}
+
+#mainMiddleChangeB,
+#mainMiddleChangeC,
+#mainMiddleChangeD {
+    display: none;
+}
+
+/*  ------------     圖片縮放      -------------  */
+img {
+    max-width: 100%;
+}
+
+.portfolio_lightbox {
+    position: fixed;
+    top: 5vh;
+    width: 100vw;
+    height: 95vh;
+    background: rgba(39, 34, 45, 0.5);
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0, 0);
+    /*圖片向量:隱藏*/
+    transition: transform ease-in-out 500ms;
+    /*圖片展開特效*/
+}
+
+.portfolio_lightbox:target {
+    transform: scale(1, 1);
+    /*圖片向量:展開*/
+}
+
+.portfolio_lightbox_content {
+    width: 70%;
+    height: 80%;
+    background: rgb(76, 64, 77);
+    padding: 2vh 0vh 1vw 1vw;
+    position: relative;
+    display: flex;
+}
+
+.close {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background: red;
+    top: -1em;
+    right: -1em;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close::after {
+    content: 'x';
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.portfolio_lightbox_contentA {
+    display: flex;
+    align-items: center;
+}
+
+.portfolio_lightbox_contentB {
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 2rem;
+    overflow: auto;
+    width: 50%;
+    margin: 0vh 1.5vw;
+}
+
+.portfolio_lightbox_contentB>h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 2vh;
+}
+
+.portfolio_lightbox_contentB>p {
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+}
+
+.portfolio_lightbox_contentB>p a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: rgb(141, 31, 31);
+}
+
+.portfolio_lightbox_contentB>p a:hover {
+    opacity: 0.8;
+}
+
+
+/*               會員註冊和登入              */
+
+
+.memberLightbox {
+    position: fixed;
+    top: 5vh;
+    width: 100vw;
+    height: 95vh;
+    background: rgba(39, 34, 45, 0.5);
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0, 0);
+    /*圖片向量:隱藏*/
+    transition: transform ease-in-out 500ms;
+    /*圖片展開特效*/
+}
+
+.memberLightbox:target {
+    transform: scale(1, 1);
+    /*圖片向量:展開*/
+}
+
+.memberLightboxContent {
+    width: 25%;
+    height: 70%;
+    background: rgb(170, 121, 121);
+    padding: 0.4em;
+    position: relative;
+    display: flex;
+}
+
+.memberClose {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background: rgb(170, 121, 121);
+    top: -1em;
+    right: -1em;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.memberClose::after {
+    content: 'x';
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.memberLightboxContentB {
+    background-color: #23242A;
+    font-weight: bold;
+    overflow: auto;
+    width: 100%;
+    position: relative;
+
+    background: #1c1c1c;
+    border-radius: 8px;
+}
+
+.memberLightboxContentB form {
+    position: absolute;
+    inset: 4px;
+    background-color: #222;
+    padding: 10vh 2vw;
+    border-radius: 1em;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.memberLightboxContentB form h2 {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.5em;
+    font-size: 2.2rem;
+}
+
+.memberLightboxContentB form .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.memberLightboxContentB form .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 2vh 1vw 0.5vw;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 8;
+}
+
+.memberLightboxContentB form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 2vh 0 1vw;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+/*點擊帳號密碼行之後*/
+.memberLightboxContentB form .inputBox input:valid~span,
+.memberLightboxContentB form .inputBox input:focus~span {
+    color: #fff;
+    font-size: 0.75em;
+    transform: translateY(-1em);
+}
+
+.memberLightboxContentB form .inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.1em;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    /*自動隱藏超出的文字或圖片*/
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.memberLightboxContentB form .inputBox input:valid~i,
+.memberLightboxContentB form .inputBox input:focus~i {
+    height: 5vh;
+}
+
+.memberLightboxContentB form .links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.memberLightboxContentB form .links a {
+    margin: 1.5vh 0;
+    font-size: 1em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.memberLightboxContentB form .links a:hover,
+.memberLightboxContentB form .links a:nth-child(2) {
+    color: #fff;
+}
+
+.memberLightboxContentB form input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 1.5vh 2vw;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 0.6em;
+    font-weight: 600;
+    width: 6vw;
+    margin-top: 1em;
+}
+
+.memberLightboxContentB form input[type="submit"]:active {
+    /*submit點擊效果*/
+    background-color: #23242a;
+    color: #fff;
+    opacity: 0.8;
+}
+
+#inputBoxA,
+span,
+i {
+    width: 100%;
+
+}
+
+.inputBoxA {
+    display: flex;
+}
+
+.Prove {
+    position: absolute;
+    left: 1.8vw;
+    border: none;
+    outline: none;
+    padding: 1.5vh;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 0.6em;
+    font-weight: 600;
+    width: 3vw;
+}
+
+#inputBoxB {
+    display: none;
+}
+
+.Prove:active {
+    background-color: #23242a;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.Send {
+    position: absolute;
+    left: 1.8vw;
+    border: none;
+    outline: none;
+    padding: 1.5vh;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 0.6em;
+    font-weight: 600;
+    width: 5vw;
+}
+
+.Send:active {
+    background-color: #23242a;
+    color: #fff;
+    opacity: 0.8;
+}
+
+
+/*           照片庫                 */
+
+.container {
+    position: relative;
+    width: 50%;
+  
+  }
+  .cursor {
+    cursor: pointer;
+  }
+
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    position: relative;
+    width: 16.66%;
+    margin: 0.5vh 0.1vw;
+  }
+
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  .row{
+    display: flex;
+    width: 50%vw;
+  }
+
+  .portfolio_lightbox_contentA{
+    display: inline;
+    width: 50%;
+    margin: 1vh 1vw;
+  }
+
+  
+  /*TTTTT*/
+  #tyModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tyModalContent {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.tyClose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.tyClose:hover,
+.tyClose:focus {
+    color: #000;
+    cursor: pointer;
+}
